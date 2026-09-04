@@ -49,7 +49,9 @@ La simulación utiliza Icarus Verilog y GTKWave, incluidos en OSS CAD Suite.
 ### Compilar
 
 ```bash
-iverilog -g2012 -o tb_oficial.vvp COMANDO_PENDIENTE
+iverilog -g2012 -o tb_oficial.vvp calculadora_4bits_tb_basico.sv calculadora_4bits.v alu4.v reg4.v mux2_1.v reset4.v adder4.v full_adder.v resta4.v resta_inv4.v invert4.v shift_left4.v shift_right4.v mux4_1.v
+vvp tb_oficial.vvp
+gtkwave calculadora_4bits_tb_basico.vcd
 
 ```
 
