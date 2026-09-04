@@ -49,6 +49,14 @@ se almacenan utilizando solamente 4 bits.
 
 La simulación utiliza Icarus Verilog y GTKWave, incluidos en OSS CAD Suite.
 
+Cada vez que uno de los 3 integrantes abra el terminal poner lo siguiente:
+
+set "PATH=RUTA\oss-cad-suite\bin;RUTA\oss-cad-suite\lib;%PATH%"
+
+RUTA = carpeta donde cada uno descomprimió OSS CAD Suite.
+
+Comprobar: iverilog -v
+
 ### Compilar
 
 ```bash
