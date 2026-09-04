@@ -78,9 +78,4 @@ En el terminal del vscode de nuestro proyecto, escribir lo siguiente para abrir 
 
 gtkwave calculadora_4bits_tb_basico.vcd
 
-
-### Abrir las señales
-
-```bash
-gtkwave calculadora_4bits_tb_basico.vcd
 ```
