@@ -33,6 +33,9 @@ se almacenan utilizando solamente 4 bits.
 - `calculadora_4bits.v`: integración del núcleo de la calculadora.
 - `alu4.v`: selección de las operaciones.
 - `adder4.v`: sumador de 4 bits.
+- `full_adder.v` — 1 bit; lo usa adder4
+- `invert4.v` — NOT; lo usa resta4
+- `reset4.v` — opcode 000
 - `resta4.v`: resta A - B.
 - `resta_inv4.v`: resta B - A.
 - `shift_left4.v`: desplazamiento hacia la izquierda.
