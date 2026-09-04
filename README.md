@@ -70,6 +70,15 @@ iverilog -g2012 -o tb_oficial.vvp calculadora_4bits_tb_basico.sv calculadora_4bi
 vvp tb_oficial.vvp
 ```
 
+### Abrir GTKWave
+
+En el terminal del vscode de nuestro proyecto, escribir lo siguiente para abrir el GTKwave:
+
+```bash
+
+gtkwave calculadora_4bits_tb_basico.vcd
+
+
 ### Abrir las señales
 
 ```bash
