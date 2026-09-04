@@ -6,7 +6,7 @@ Verilog para la FPGA Lattice iCE40 HX1K de la Nandland Go Board.
 ## Integrantes
 
 - Nombre integrante 1: Juan Vicente Celedón
-- Nombre integrante 2: Ignacio Cruzat 
+- Nombre integrante 2: Ignacio Cruzat
 - Nombre integrante 3: Wille Saarenpaa
 
 ## Objetivo
@@ -33,9 +33,9 @@ se almacenan utilizando solamente 4 bits.
 - `calculadora_4bits.v`: integración del núcleo de la calculadora.
 - `alu4.v`: selección de las operaciones.
 - `adder4.v`: sumador de 4 bits.
-- `full_adder.v` — 1 bit; lo usa adder4
-- `invert4.v` — NOT; lo usa resta4
-- `reset4.v` — opcode 000
+- `full_adder.v`: sumador completo de 1 bit; bloque base de `adder4.v`.
+- `invert4.v`: inversor bit a bit de 4 bits; utilizado para complemento a dos en `resta4.v`.
+- `reset4.v`: genera `4'b0000` para la operación de reinicio `000`.
 - `resta4.v`: resta A - B.
 - `resta_inv4.v`: resta B - A.
 - `shift_left4.v`: desplazamiento hacia la izquierda.
@@ -44,6 +44,7 @@ se almacenan utilizando solamente 4 bits.
 - `mux4_1.v`: multiplexor de cuatro entradas.
 - `reg4.v`: registro del resultado.
 - `calculadora_4bits_tb_basico.sv`: testbench principal.
+
 
 ## Simulación
 
@@ -61,9 +62,6 @@ Comprobar: iverilog -v
 
 ```bash
 iverilog -g2012 -o tb_oficial.vvp calculadora_4bits_tb_basico.sv calculadora_4bits.v alu4.v reg4.v mux2_1.v reset4.v adder4.v full_adder.v resta4.v resta_inv4.v invert4.v shift_left4.v shift_right4.v mux4_1.v
-vvp tb_oficial.vvp
-gtkwave calculadora_4bits_tb_basico.vcd
-
 ```
 
 ### Ejecutar
