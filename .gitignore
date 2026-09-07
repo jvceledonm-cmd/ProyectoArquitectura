@@ -1,0 +1,15 @@
+# Archivos generados por APIO
+_build/
+
+# Simulación
+*.vcd
+*.vvp
+simulacion
+
+# Archivos generados por síntesis
+*.json
+*.asc
+*.bin
+
+# macOS
+.DS_Store
