@@ -4,11 +4,50 @@ module reg4 (
   input  [3:0] d,
   output [3:0] q
 );
-  reg [3:0] q_r;
-  assign q = q_r;
 
-  always @(posedge clk) begin
-    if (en)
-      q_r <= d;
-  end
+  dff_en bit0 (
+    .clk(clk),
+    .en(en),
+    .d(d[0]),
+    .q(q[0])
+  );
+
+  dff_en bit1 (
+    .clk(clk),
+    .en(en),
+    .d(d[1]),
+    .q(q[1])
+  );
+
+  dff_en bit2 (
+    .clk(clk),
+    .en(en),
+    .d(d[2]),
+    .q(q[2])
+  );
+
+  dff_en bit3 (
+    .clk(clk),
+    .en(en),
+    .d(d[3]),
+    .q(q[3])
+  );
+
+endmodule
+
+
+module dff_en (
+  input  clk,
+  input  en,
+  input  d,
+  output q
+);
+
+  SB_DFFE flip_flop (
+    .C(clk),
+    .E(en),
+    .D(d),
+    .Q(q)
+  );
+
 endmodule
